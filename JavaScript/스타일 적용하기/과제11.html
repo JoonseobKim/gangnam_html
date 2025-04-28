@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제 10</title>
+    <style>
+        * {
+
+            font-size: 10px;
+            /* font-style: italic; */
+        }
+
+        .target {
+            border: 1px solid black;
+            width: 400px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>텍스트 스타일 조정</h2>
+
+    텍스트 입력: <br />
+    <input type="text" id="input_text" />
+    <input type="button" id="text_button" value="입력" onclick="ch_text()"> <br /> <br />
+
+    텍스트 색상: <br />
+    <input type="radio" name="color" onchange="color('yellow')">노랑
+    <input type="radio" name="color" onchange="color('black')">검정
+    <input type="radio" name="color" onchange="color('green')">초록
+    <input type="radio" name="color" onchange="color('blue')">파랑
+    <input type="radio" name="color" onchange="color('red')">빨강 <br /> <br />
+
+    텍스트 스타일: <br />
+    <input type="checkbox"  onchange="weight(event)"> 굵게
+    <input type="checkbox"  onchange="italic(event)"> 기울기 <br /> <br />
+
+
+    폰트 크기: <br />
+    <input type="button" value="-" onclick="ch_down()">
+    <span id="fontSize">10px</span>
+    <input type="button" value="+" onclick="ch_up()"> <br /> <br />
+
+    <div class="target" id="target"></div>
+
+
+
+    <script>
+        const target = document.getElementById('target');
+        const inp_text = document.getElementById('input_text');
+        let size = 10;
+
+      
+
+
+        function ch_text() {
+            target.textContent = inp_text.value;
+        }
+
+
+
+        function color(color) {
+            target.style.color = color;
+        }
+
+
+
+        function weight(event) {
+            //삼항 연산자 (조건식 ? 참값 : 거짓 값)
+            event.target.checked ? target.style.fontWeight='bold' : target.style.fontWeight='normal';
+                }
+        function italic(event) {
+            event.target.checked ? target.style.fontStyle='italic' : target.style.fontStyle='normal';
+        }
+
+
+
+        function ch_down() {
+            size = size - 1;
+            target.style.fontSize = size + 'px';
+            document.getElementById('fontSize').textContent = target.style.fontSize;
+
+        }
+        function ch_up() {
+            size = size + 1;
+            target.style.fontSize = size + 'px';
+            document.getElementById('fontSize').textContent = target.style.fontSize;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

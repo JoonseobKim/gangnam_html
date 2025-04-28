@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트클릭</title>
+
+    <style>
+        .div_a {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            z-index: 2;
+        }
+
+        .div_b {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            z-index: 2;
+        }
+
+        #out {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+
+            display: none;
+        }
+
+        body {
+            height: 300vh;
+        }
+    </style>
+</head>
+
+<body onload="로드()" onresize="창변경()" onscroll="스크롤()" onunload="닫기()">
+    <!-- ======================================================================================================================== -->
+    <h1>윈도우 이벤트</h1>
+
+    <script>
+        /***************************************
+        * 윈도우 이벤트 핸들러 (적용 대상: body)
+        ***************************************/
+        function 닫기() {
+            alert('닫기');
+        }
+        // 스크롤이벤트: 스크롤 움직일 때, 이쁘니까 사용하자
+        function 스크롤() {
+            console.log('abc');
+        }
+        // 웹 페이지(이미지, 테그, 스크립트, css 등)가 로딩(랜더링) 완료될 때 열림
+        function 로드() {
+            alert('페이지가 열렸다.');
+        }
+
+        // 해당 역역의 길이 및 높이의 변동이 갑지 되었을 때
+        function 창변경() {
+            alert('크기가 변경되었다.');
+        }
+    </script>
+
+
+
+
+    <!-- ======================================================================================================================== -->
+    <h1>마우스 이벤트</h1>
+
+    <!-- 온 클릭 -->
+    <input type="button" onclick="클릭1(5, 'a')" value="클릭" />
+    <!-- 더블 클릭 -->
+    <input type="button" ondblclick="클릭2()" value="더블클릭" />
+    <!-- 마우스 다운: 마우스를 누르는 그 순간, 동작 -->
+    <input type="button" onmousedown="클릭3()" value="마우스 다운" />
+    <!-- 마우스 업: 마우스를 누르고 떼는 그 순간, 동작 -->
+    <input type="button" onmouseup="클릭4()" value="마우스 업">
+
+    <div class="div_a" id="div_a" onmouseout="영역2()" onmouseover="영역1()" />
+    </div>
+    <div class="div_b" id="div_b" onmousemove="영역3()"></div>
+    <div id="out"> </div>
+    <script>
+        /***************************************
+        * 마우스 이벤트 핸들러
+        ***************************************/
+        // 마우스 무브 (마우스 움직일 때)
+        function 영역3() {
+            console.log('3');
+        }
+        // 마우스 오버
+        function 영역1() {
+            document.getElementById('out').style.display = 'block'
+            document.getElementById('div_a').style.backgroundColor = 'red';
+        }
+        function 영역2() {
+            document.getElementById('out').style.display = 'none'
+            document.getElementById('div_a').style.backgroundColor = 'blue';
+        }
+        // 마우스 클릭
+        function 클릭1(num, text) {
+            alert(num, text);
+            alert(text);
+        }
+        function 클릭2(num, text) {
+            alert("더블클릭");
+        }
+        function 클릭3() {
+            alert("마우스 다운");
+        }
+        function 클릭4() {
+            alert("마우스 업");
+        }
+    </script>
+
+
+
+
+    <!-- ======================================================================================================================== -->
+    <h1>키보드 이벤트</h1>
+    <!-- 사용처: 로그인, 회원가입 유효성 검사, 검색 기능(게시판) -->
+    <!-- 우리가 마우스를 사용하지 않았어도, 유효성 검사 또는 검색이 되는 경우 -->
+    <input type="text" id="tar" onkeydown="키보드1()" placeholder="onkeydown" /> <br>
+    <input type="text" id="tar2" onkeyup="키보드2()" placeholder="onkeyup" /> <br>
+    <input type="text" id="tar3" onkeypress="키보드3()" placeholder="onkeypress" /> <br>
+    <input type="text" onkeyup="이벤트1(event)" placeholder="onkeyup" onkeydown="엔터(event)" /> <br>
+    <script>
+        /***************************************
+        * 키보드 이벤트 핸들러
+        ***************************************/
+        function 엔터(e) {
+            console.log(e.keyCode);
+            // Enter(keyCode = 13) 누름 인식
+            if (e.keyCode == 13) {
+                alert('엔터 클릭');
+                document.getElementById('tar').focus();
+            }
+        }
+        function 이벤트1(e) {
+            const tar = e.target;
+            console.log(tar.value);
+        }
+        // 키보드를 누르는 순간 인식
+        function 키보드3() {
+            const tar = document.getElementById('tar3').value;
+            console.log(tar);
+        }
+        // 키보드를 눌렀다 뗐을 때 인식
+        function 키보드2() {
+            const tar = document.getElementById('tar2').value;
+            console.log(tar);
+        }
+        // 키보드가 눌렸을 때 인식
+        function 키보드1() {
+            const tar = document.getElementById('tar').value;
+            console.log(tar);
+        }
+    </script>
+
+
+
+</body>
+
+</html>

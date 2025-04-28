@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>영화포스터</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Gamja+Flower&family=Gugi&family=Jua&display=swap"
+        rel="stylesheet">
+
+
+
+
+    <style>
+        .jua-regular {
+            font-family: "Jua", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .out_box {
+            position: relative;
+
+            width: 300px;
+            height: 400px;
+
+            background-image: url('https://joyposter.cafe24.com/NEW-posters/F600X848Poster/FMV-625.jpg');
+            background-size: 100% 100%;
+        }
+
+        .in_box {
+
+            position: absolute;
+            top: 20px;
+            left: 250px;
+            border: solid 3px rgb(25, 29, 65);
+            border-radius: 10px;
+
+            width: 30px;
+            height: 40px;
+
+            background-image: url('data:image/png;base64,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');
+            background-size: 100% 100%;
+        }
+
+        .btn1 {
+            position: absolute;
+            top: 230px;
+            left: 105px;
+            width: 100px;
+            height: 20px;
+
+        }
+
+        .num {
+            position: absolute;
+            top: 320px;
+            left: 25px;
+            width: 100px;
+            height: 20px;
+        }
+
+        .font {
+            font-size: 60px;
+            color: whitesmoke;
+        }
+
+        .font2 {
+            margin-top: 5px;
+            padding: 2px;
+            font-size: 15px;
+            color: whitesmoke;
+            border-radius: 10px;
+            background-color: rgba(113, 108, 108, 0.8);
+            text-align: center;
+        }
+
+        .font3 {
+            margin-top: 5px;
+            padding: 2px;
+            font-size: 15px;
+            color: whitesmoke;
+            border-radius: 10px;
+            background-color: rgba(168, 58, 58, 0.8);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out_box jua-regular">
+        <div class="in_box"></div>
+        <div class="btn1">
+            <div class="font2">상세보기</div>
+            <div class="font3">예매하기</div>
+        </div>
+        <div class="num font">1</div>
+    </div>
+</body>
+
+</html>

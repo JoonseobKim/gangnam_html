@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>끼얏호</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Do+Hyeon&family=Gamja+Flower&family=Gugi&family=Jua&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .do-hyeon-regular {
+            font-family: "Do Hyeon", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        main .main-container div {
+            border: 1px solid red;
+        }
+
+
+
+        .login-container {
+            width: 80vw;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* nav 영역 */
+        .login-container .top_box {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            height: 55px;
+
+            padding: 0 30px;
+
+            background-color: black;
+            background-size: 100% 100%;
+
+            font-family: "Jua", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+
+            font-size: 14px;
+            color: rgb(191, 187, 187);
+            text-align: left;
+            word-spacing: 10px;
+
+
+        }
+
+        /* login-container main 영역 */
+        .login-container main {
+            height: 100%;
+            background-color: #FAFAFA;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .login-container .main-container {
+            width: 490px;
+            height: 100%;
+        }
+
+
+
+        .login-container .main-container .title-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            background-color: #F5F5F5;
+            height: 52px;
+        }
+
+        .login-container .main-container .title-container span {
+            padding: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        /** 로그인 관리 영역 */
+        .login-container .main-container .login-form-container {
+            height: 100%;
+        }
+
+        .login-container .main-container .login-form-container .login-area {
+            padding: 20px;
+            height: 150px;
+        }
+
+        /* login input 창 */
+        .login-container .main-container .login-form-container .login-area>div {
+            border: 1px solid gray;
+            margin-top: 15px;
+        }
+
+        .login-container .main-container .login-form-container .login-area div:nth-child(2) {
+            display: flex;
+        }
+
+        .login-container .main-container .login-form-container .login-area div .form-img {
+            margin-left: 5px;
+
+            width: 29px;
+            height: 29px;
+            background-image: url('eyes.png');
+            background-size: 100% 100%;
+        }
+
+        .login-container .main-container .login-form-container .login-area input[type="text"],
+        .login-container .main-container .login-form-container .login-area input[type="password"] {
+            width: 100%;
+            height: 34px;
+            border: none;
+        }
+
+        .login-container .main-container .login-form-container .login-area .login_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 16px;
+            height: 34px;
+            background-color: #000000;
+            color: white;
+
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        /* keepgoing: 자동로그인+아이디찾기/비밀번호찾기 */
+        .keepgoing {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            font-size: 10px;
+            color: #ACABAC;
+        }
+
+        .login-container .main-container .login-form-container .login-area .kakao_login {
+            width: 100%;
+            height: 25%;
+            background-image: url('./화면\ 캡처\ 2025-04-22\ 191935.png');
+            background-size: 100% 100%;
+
+        }
+
+        .login-container .main-container .login-form-container .login-area .apple_login {
+            width: 100%;
+            height: 25%;
+            background-image: url('./화면\ 캡처\ 2025-04-22\ 192119.png');
+            background-size: 100% 100%;
+        }
+
+        .advertise{
+            display: flex;
+            justify-content: center; /* justify: 진행방향 정렬 */
+            align-items: center; /* align: 진행 방향의 90도로 정렬 */
+            font-size: 12px;
+     
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container do-hyeon-regular">
+        <!-- nav 영역-->
+        <nav class="top_box">
+            <!-- nav의 왼쪽 영역-->
+            <div>
+                = | MUSINSA BEAUTY PLAYER OUTLET BOUTIQUE SNEAKERS KID | (S)SNAP
+            </div>
+            <!-- nav의 오른쪽 영역 -->
+            <div>
+                동해물과
+            </div>
+        </nav>
+
+        <!-- main -->
+        <main>
+            <!-- main, 실제 사용 공간 -->
+            <div class="main-container">
+
+                <!-- title 공간 -->
+                <div class="title-container"><span>로그인/회원가입</span></div>
+
+                <!-- 로그인 form 공간 -->
+                <div class="login-form-container">
+
+                    <div class="login-area">
+                        <div>
+                            <input type="text" placeholder=" 아이디" />
+                        </div>
+                        <div>
+                            <input type="password" placeholder=" 비밀번호" />
+                            <div class="form-img"></div>
+                        </div>
+                        <div class="login_btn">
+                            로그인
+                        </div>
+
+                        <!-- keepgoing: 자동로그인+아이디찾기/비밀번호찾기 -->
+                        <div class="keepgoing">
+
+                            <div>
+                                <input type="checkbox" , name="auto_login">자동 로그인
+                            </div>
+
+                            <div>
+                                <div>
+                                    아이디 찾기
+                                </div>
+                                |
+                                <div>
+                                    비밀번호 찾기
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="kakao_login"></div>
+
+                        <div class="apple_login"></div>
+
+                        <div class="advertise">
+                            가입만 해도 즉시 20% 할인
+                            <input type="button" value="회원가입">
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </main>
+    </div>
+</body>
+
+</html>

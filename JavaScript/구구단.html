@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단</title>
+</head>
+
+<body>
+    <h1>구구단</h1>
+    <input type="text" id="number">
+    <input type="button" value="클릭" onclick="구구단()">
+
+    <script>
+
+        function 구구단() {
+            const num = document.getElementById('number');
+
+            if (parseInt(num.value) < 1 || parseInt(num.value) > 9) {
+                console.log("1~9 사이의 정수로 다시 입력하세요. ");
+            }
+            else {
+                for (let j = 1; j <= 9; j++) {
+                    console.log(parseInt(num.value) + " x " + j + " = " + (parseInt(num.value) * j));
+                }
+            }
+
+            num.value = '';
+        }
+
+    </script>
+</body>
+
+</html>

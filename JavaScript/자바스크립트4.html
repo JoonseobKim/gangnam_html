@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert</title>
+</head>
+<body>
+    
+    <input type="button" value="버튼 클릭" onclick="동작()" />
+    <input type="button" value="버튼 클릭" onclick="prom2()" />
+    <input type="button" value="버튼 클릭" onclick="conf()" />
+
+    <script>
+
+        function 동작() {
+
+            console.log("동작");
+            // 사용자에게 알림 기능
+            alert('실행');
+
+        }
+
+        function prom2() {
+            // 20세 미만, 청소년입니다.
+            // 20세 이상, 성인입니다.
+            const userAge = prompt('당신의 나이는?');
+ 
+            if(userAge < 20) {
+                alert("청소년 입니다.");
+            }
+            else {
+                alert("성인 입니다.");
+            }
+            
+        }
+
+        // 이쁘지 않아서 잘 안쓰임
+        function conf() {
+
+            // 값을 true, false로 변환
+            const eng = confirm("당신은 영어를 할 수 있습니까?");
+            alert(eng);
+
+        }
+
+    </script>
+</body>
+</html>

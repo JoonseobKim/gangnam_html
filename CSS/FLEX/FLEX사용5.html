@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 5</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Do+Hyeon&family=Gamja+Flower&family=Gugi&family=Jua&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .do-hyeon-regular {
+            font-family: "Do Hyeon", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(250, 244, 244);
+            word-spacing: 2px;
+        }
+
+        .outbox {
+            width: 50vw;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card {
+
+            width: 100%;
+            height: 150px;
+
+            background-color: white;
+            
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .progweb {
+            margin-left: 15px;
+            display: flex;
+            justify-content: left;
+            width: 20%;
+            height: 20%;
+            gap: 10px;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .long_word {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            font-size: 14px;
+            border-radius: 15px;
+            background-color: rgb(16, 143, 194);
+            color: white;
+            width: 60px; 
+            display: flex;
+            justify-content: center;           
+        }
+        .short_word {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            font-size: 14px;
+            border-radius: 15px;
+            background-color: rgb(16, 143, 194);
+            color: white;
+            width: 40px; 
+            display: flex;
+            justify-content: center;   
+        }
+        .very_long_word {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            font-size: 14px;
+            border-radius: 15px;
+            background-color: rgb(16, 143, 194);
+            color: white;
+            width: 70px; 
+            display: flex;
+            justify-content: center;           
+        }
+        .info {
+            margin-left: 20px;
+            margin-top: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            width: 100%;
+            height: 60%;
+            color: rgb(110, 106, 106);
+        }
+        .htmlcss {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: black;
+        }
+        .like {
+            color: red;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="do-hyeon-regular">
+        <div class="outbox">
+            <div class="card">
+                <div class="progweb">
+                    <div class="long_word">프로그래밍</div>
+                    <div class="short_word">웹개발</div>
+                </div>
+                <div class="info">
+                    <div class="htmlcss">
+                        <span>HTML과 CSS 기초</span>
+                    </div>
+                    <span>웹 개발의 기본이 되는 HTML과 CSS의 기초를 배워봅니다. 테그의 의미와 스타일링 방법을 알아보세요.</span> <br />
+                    <div class="like"><span>🤎 42</span></div>
+                    
+                </div>
+
+                
+            </div>
+            <div class="card">
+                <div class="progweb">
+                    <div class="short_word">디자인</div>
+                    <div class="short_word">UI/UX</div>
+                </div>
+                <div class="info">
+                    <div class="htmlcss">
+                        <span>사용자 경험 디자인</span>
+                    </div>
+                    <span>좋은 사용자 경험을 만드는 방법을 알아보세요. 사용자가 쉽고 편리하게 사용할 수 있는 인터페이스 설계 방법을 배웁니다.</span> <br />
+                    <div class="like"><span>🤎 38</span></div>
+                </div>
+
+                
+            </div>
+            <div class="card">
+                <div class="progweb">
+                    <div class="long_word">프로그래밍</div>
+                    <div class="very_long_word">자바스크립트</div>
+                </div>
+                <div class="info">
+                    <div class="htmlcss">
+                        <span>자바스크립트 입문</span>
+                    </div>
+                    <span>웹 페이지에 동적인 기능을 추가하는 자바스크립트의 기초를 배워봅니다. 변수, 함수, 조건문 등 기본 개념을 알아보세요.</span> <br />
+                    <div class="like"><span>🤎 56</span></div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

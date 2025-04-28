@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니매이션</title>
+    <style>
+        .target {
+            margin-top: 400px;
+            margin-left: 400px;
+            width: 100px;
+            height: 100px;
+            background-image: url('https://i.namu.wiki/i/wXGU6DZbHowc6IB0GYPJpcmdDkLO3TW3MHzjg63jcTJvIzaBKhYqR0l9toBMHTv2OSU4eFKfPOlfrSQpymDJlA.webp');
+            background-size: 100% 100%;
+        }
+
+        .monster {
+            margin-top: 400px;
+            margin-left: 1000px;
+            width: 100px;
+            height: 100px;
+            background-image: url('https://i.namu.wiki/i/ZOo_hfPeQdUNALkGjohDptJKuaD3mHtcVC-BL2kBehRi86fQALYBxAmXIYlXn_dPOtwDcYSsNUpBm-xNGlZCWA.webp');
+            background-size: 100% 100%;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .ground {
+            width: 100%;
+            height: 300px;
+            background-color: yellowgreen;
+        }
+
+        div.active1 {
+            animation-name: test1;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+        }
+
+        div.monster_active1 {
+            animation-name: monster_test1;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+        }
+
+        div.active2 {
+            animation-name: test2;
+            animation-duration: 10s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+        }
+
+        div.monster_active2 {
+            animation-name: monster_test2;
+            animation-duration: 10s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+        }
+
+
+        @keyframes test1 {
+            0% {
+                transform: translateX(0px);
+            }
+
+            30% {
+                transform: translate(1000px);
+                
+            }
+            50% {
+                background-image: url('https://thumbnail.10x10.co.kr/webimage/image/basic600/513/B005138696.jpg?cmd=thumb&w=400&h=400&fit=true&ws=false');
+            }
+
+            70% {
+                transform: translateX(1000px);
+                background-image: url('https://www.nintendo.com/kr/character/kirby/assets/img/home/kirby-puffy.png');
+            }
+
+            100% {
+                transform: scale(2) translate(200px, -200px);
+                background-image: url('https://mblogthumb-phinf.pstatic.net/MjAyMDAyMTdfMiAg/MDAxNTgxOTEwNjkyNzY1.kkDYsEQDcBZoJMJSpmjvpCOOlWi5Qu0aAftMd7vgIncg.qjFTji6UNu4yop7QHxIj8H_XbskOtfKwviQqip93jGgg.JPEG.o8o8o8486/1581910692267.jpg?type=w800');
+               
+                
+            }
+        }
+
+        @keyframes monster_test1 {
+            0% {
+            }
+
+            30% {
+
+            }
+            50% {
+            }
+
+            70% {
+            }
+
+            100% {
+                background-image: none;
+            }
+        }
+
+        @keyframes test2 {
+            0% {
+                transform: translateX(0px);
+            }
+
+            20% {
+                background-image: url('https://www.nintendo.com/kr/character/kirby/assets/img/home/kirby-puffy.png');
+            }
+            30% {
+                background-image: url('https://www.nintendo.com/kr/character/kirby/assets/img/home/kirby-puffy.png');
+                transform: scale(2) translate(100px, -100px);
+            }
+            40% {
+                background-image: url('https://www.nintendo.com/kr/character/kirby/assets/img/home/kirby-puffy.png');
+                transform: scale(2) translate(150px, -150px) rotate(1080deg);
+            }
+            70% {
+                background-image: url('https://www.nintendo.com/kr/character/kirby/assets/img/home/kirby-puffy.png');
+                transform: scale(2.5) translate(150px, -150px);
+            }
+
+            100% {
+               transform: translate(600px, 0px);
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <input type="button" onclick="변형1()" value="변신" />
+    <input type="button" onclick="변형2()" value="날아라" />
+    <br> <br> <br> <br> <br> <br>
+
+    <div class="flex">
+        <div id="target" class="target"></div>
+        <div id="monster" class="monster"></div>
+    </div>
+
+    <div class="ground"></div>
+
+
+    <script>
+        function 변형1() {
+            document.getElementById('target').classList.toggle('active1');
+            document.getElementById('monster').classList.toggle('monster_active1');
+        }
+
+        function 변형2() {
+            document.getElementById('target').classList.toggle('active2');
+            document.getElementById('monster').classList.toggle('monster_active2');
+        }
+
+    </script>
+
+</body>
+
+</html>

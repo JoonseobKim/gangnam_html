@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디스플레이2</title>
+
+    <style>
+        .div-A {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            border: red 3px solid;
+        }
+
+        .div-B {    
+            height: 150px;
+            display: block;
+            border: blue 3px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class = "div-B">
+
+        <div class="div-A">
+            A
+        </div>
+        <div class="div-A" style="display: none;">
+            B
+        </div>
+        <div class="div-A">
+            C
+        </div>    
+
+    </div>
+    <div class = "div-B" style="display: none;">
+    </div>
+</body>
+</html>

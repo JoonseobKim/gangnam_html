@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제9</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Do+Hyeon&family=Gamja+Flower&family=Gugi&family=Jua&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .do-hyeon-regular {
+            font-family: "Do Hyeon", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            height: 950px;
+            width: 1900px;
+            background-color: rgb(250, 244, 244);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .outbox {
+            width: 1300px;
+            height: 500px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* justify-content: space-between; */
+            gap: 20px;
+        }
+
+        .card {
+            position: relative;
+            width: 340px;
+            height: 500px;
+
+            background-color: white;
+            border: solid 1px #FAF4F4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .img_1 {
+            width: 400px;
+            height: 230px;
+            background-image: url('https://i.pinimg.com/1200x/92/cd/4b/92cd4bf1432dedd94ea6ffcdd064db1b.jpg');
+            background-size: 100% 100%;
+        }
+
+        .img_2 {
+            width: 400px;
+            height: 230px;
+            background-image: url('https://lh3.googleusercontent.com/proxy/GQEZgKCPYtCTqlN_4tjo2HHHDM2kjwV9m-O8fMIa0TLFVGyeSF7N843TFuWrji3XIW-tHWlgv3S6YYIGpiELlX6jcmeiSWuHxIJbgUHO7HsVssAB878XEK-zq6LCRCTNpQeODAr2QswEvm3BU45-wEwR3w');
+            background-size: 100% 100%;
+        }
+
+        .img_3 {
+            width: 400px;
+            height: 230px;
+            background-image: url('https://mblogthumb-phinf.pstatic.net/MjAyMTAxMDhfMjUy/MDAxNjEwMTE3ODU2NjUw.vhweZXaih3iwS9Undn5dYDbXK3QadeQxVEe1OraBIrgg.QKWg4MsI1icujodoyCvZMpDM4y7_HQgVxRQ3uNMQq_og.JPEG.oomshop2/adult-1867665.jpg?type=w800');
+            background-size: 100% 100%;
+        }
+
+        .devide_theme {
+            width: 70px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            padding-top: 10px;
+
+        }
+
+        .devide_theme_name {
+            background-color: rgb(65, 185, 65);
+            font-size: 15px;
+            color: white;
+            border-radius: 15px;
+            width: 60px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .devide_title {
+            height: 30px;
+            width: 400px;
+            font-size: 30px;
+            padding-left: 15px;
+            padding-bottom: 10px;
+
+        }
+
+        .devide_info {
+            padding-left: 15px;
+            padding-top: 10px;
+            padding-right: 15px;
+
+            width: 305px;
+            height: 75px;
+
+            color: rgb(94, 90, 90);
+            font-size: 20px;
+
+            /* 3줄 초과는 생략 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .devide_likedate {
+            position: absolute;
+            bottom: 10px;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-top: 50px;
+
+        }
+
+        .devide_like {
+
+            position: absolute;
+            bottom: 10px;
+            color: red;
+            font-size: 17px;
+            width: 80px;
+            height: 20px;
+
+        }
+
+        .devide_date {
+
+            position: absolute;
+            left: 250px;
+            bottom: 10px;
+            color: rgb(173, 169, 169);
+            font-size: 15px;
+            width: 80px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="do-hyeon-regular">
+        <div class="outbox">
+
+            <!-- 카드 1 -->
+            <div class="card">
+                <div class="img_1"></div>
+                <div class="devide_theme">
+                    <div class="devide_theme_name">
+                        자연
+                    </div>
+                </div>
+                <div class="devide_title">
+                    아름다운 자연의 순간
+                </div>
+                <div class="devide_info">
+                    우리의 일상 속에서 발견할 수 있는 자연의 아름다움을 담았습니다. 평화로운 순간을 함께 나눠보세요.
+                </div>
+                <div class="devide_likedate">
+                    <div class="devide_like">
+                        ❤ 1,234
+                    </div>
+                    <div class="devide_date">
+                        2024.03.21
+                    </div>
+                </div>
+            </div>
+
+            <!-- 카드 2 -->
+            <div class="card">
+                <div class="img_2"></div>
+                <div class="devide_theme">
+                    <div class="devide_theme_name">
+                        도시
+                    </div>
+                </div>
+                <div class="devide_title">
+                    현대 도시의 야경
+                </div>
+                <div class="devide_info">
+                    불이 켜진 도시의 밤 풍경을 담았습니다. 도시의 활기찬 에너지를 느껴보세요.
+                </div>
+                <div class="devide_likedate">
+                    <div class="devide_like">
+                        ❤ 2,567
+                    </div>
+                    <div class="devide_date">
+                        2024.03.20
+                    </div>
+                </div>
+            </div>
+
+            <!-- 카드 3 -->
+            <div class="card">
+                <div class="img_3"></div>
+                <div class="devide_theme">
+                    <div class="devide_theme_name">
+                        인물
+                    </div>
+                </div>
+                <div class="devide_title">
+                    일상의 순간들
+                </div>
+                <div class="devide_info">
+                    우리의 일상 속에서 포착한 특별한 순간들입니다. 평범한 일상이 특별해지는 순간을 만나보세요.
+                </div>
+                <div class="devide_likedate">
+                    <div class="devide_like">
+                        ❤ 3,890
+                    </div>
+                    <div class="devide_date">
+                        2024.03.19
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지</title>
+</head>
+<body>
+    <!-- 이미지를 불러오는 테그 -->
+     <!-- src: 이미지를 불러오는 경로 -->
+      <!-- alt: 이미지르 못 불러올 때, 표현되는 text, 이미지 설명 -->
+    <img  src="./별의커비2.jpg" alt="★별의 커비 등장★1"/>
+    
+    <!-- 경로: 현재위치 => . 쉼표부터 시작, (생략 가능) -->
+     <!-- 생략 조건, 같은 위치에 존재했을 경우 -->
+     <img  src="별의커비2.jpg" alt="★별의 커비 등장★2"/>
+
+     <!-- 자식 폴더로 이동할 때: [위치]/[폴더 명] -->
+      <!-- 부모 폴더로 이동할 때: ../ 즉, 리눅스와 동일하게 사용하자 -->
+      <img  src="../asset/img/별의커비.jpg" alt="★별의 커비 등장★3"/>
+
+
+     <!-- 경로: 절대경로의 최상위는 항상 => / 이거부터 시작 -->
+      <img src="http://127.0.0.1:5500/HTML/%EB%B3%84%EC%9D%98%EC%BB%A4%EB%B9%842.jpg" />
+      <img src="https://www.nintendo.com/kr/character/kirby/assets/img/about/characters-kirby.png" />
+
+
+</body>
+</html>

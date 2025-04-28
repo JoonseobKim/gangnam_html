@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제6</title>
+</head>
+<body>
+    <input type="text" id="input_id" placeholder="아이디 입력">
+    <input type="text" id="input_pw" placeholder="비밀번호 입력">
+    <input type="button" value="로그인" onclick="check()">
+
+    <script>
+
+    
+        function check() {
+
+            const userId = document.getElementById('input_id');
+            const userPw = document.getElementById('input_pw');
+            
+            if (userId.value == 'admin' && userPw.value == '1234') {
+                alert("로그인 성공");
+            } else if (userId.value == 'admin' && userPw.value != '1234') {
+                alert("비밀번호를 다시 입력하세요.");
+                userPw.value='';
+            } else {
+                alert("로그인 실패");
+                userId.value = '';
+                userPw.value ='';
+            }
+
+        }
+    </script>
+</body>
+</html>

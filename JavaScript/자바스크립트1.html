@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트1</title>
+
+    <!-- script 사용 영역 1 -->
+     <script>
+
+
+     </script>
+
+</head>
+<body>
+
+    <!-- script 사용 영역 2-->
+     <script>
+
+        // 변수
+        // var, let, const
+        // java에서 변수 선언 방식
+        // 데이터타입 변수명 = '값'
+        // let: 데이터타입 정수, 논리, 문자.
+        // 개발자의 편의를 위해서 데이터타입을 통일
+        // 단, 사용 방법을 통일 시킨 것이지, 문자, 숫자, 논리 타입이 삭제된 것은 아님
+        let 변수 = 'aa';
+        let 변수2 = 100;
+
+        console.log(typeof(변수));
+        console.log(typeof(변수2));
+
+        // 출력
+        console.log(변수);  // = system.out.print 하고 비슷함
+        console.log(변수2);
+
+        // 조건문
+        // true 실행
+        // == : 데이터타입은 신경쓰지 않고 같은지 확인
+        // === : 데이터타입까지 일치하는지 확인
+        if(변수 === 'aa'){
+            console.log('aa가 맞습니다.');
+        }
+
+        if(변수2 === '100') {
+            console.log('100이 맞습니다.');
+        } else {
+            console.log('100이 아닙니다.');
+        }
+
+
+        let 변수3 = '300';
+        console.log(Number(변수3) + 500); // 숫자 ( 정수, 실수 모두 )
+
+        console.log(parseInt(변수3) + 500); // 정수
+
+        console.log(parseFloat(변수3) + 500); // 실수
+
+        console.log(String(200));
+
+        const FIN = '정의'; // 상수
+
+     </script>
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제7</title>
+</head>
+
+<body>
+    <h1>설문조사</h1>
+    <form>
+
+        참여자:
+        <input type="text" id="name" /> <br />
+        좋아하는 도시:
+        <input type="radio" name="city" value="서울">서울
+        <input type="radio" name="city" value="인천">인천
+        <input type="radio" name="city" value="대전">대전
+        <input type="radio" name="city" value="부산">부산
+        <input type="radio" name="city" value="광주">광주
+        <input type="radio" name="city" value="그 외">그 외
+        <input type="text" id="other"> <br />
+    
+        좋아하는 이유:
+        <input type="checkbox" name="like" value="먹거리">먹거리
+        <input type="checkbox" name="like" value="레저">레저
+        <input type="checkbox" name="like" value="힐링">힐링
+        <input type="checkbox" name="like" value="교통">교통
+        <input type="checkbox" name="like" value="쇼핑">쇼핑
+        <input type="checkbox" name="like" value="관광">관광 <br /><br />
+    
+        <input type="button" value="제출" onclick="제출()" />
+        <input type="reset" value="초기화" />
+    </form>
+
+    <script>
+
+        function 제출() {
+
+            let let_city = '';
+            let let_like = '';
+
+            const name = document.getElementById('name');
+            const cities = document.getElementsByName('city');
+            const likes = document.getElementsByName('like');
+            let cityName = '';
+
+            for (let i = 0; i < cities.length; i++) {
+                if (cities[i].checked) {
+                    let_city = cities[i].value;
+                    if(let_city == '그 외'){
+                        let_city = other.value;
+                    }
+                }
+            }
+
+            console.log("이름: " + name.value + "\n");
+            console.log(let_city + "\n");
+            for (let i = 0; i < likes.length; i++) {
+                if (likes[i].checked) {
+                    let_like +=' ' + likes[i].value;
+                   
+                }
+            }
+            console.log(let_like);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스 사용</title>
+    <style>
+        body {
+            margin-left: 30px;
+        }
+        .outline,
+        .box {
+            width: 60px;
+            height: 60px;
+        }
+
+        .outline {
+            margin-top: 20px;
+            border: 3px solid black;
+            z-index: 2;
+            /* 화면에 보여주는 우선 순위 ( 숫자가 높을수록 위 ) */
+            
+        }
+
+        .box {
+            background-color: deepskyblue;
+            z-index: 1;
+        }
+
+        .tran1 {
+            transform: translateX(50px);
+        }
+
+        .tran2 {
+            transform: translateX(-20px);
+        }
+
+        .tran3 {
+            transform: translateY(30px);
+        }
+
+        .tran4 {
+            transform: translateY(-30px);
+        }
+
+        .tran5 {
+            transform: translate(50px, 30px);
+        }
+
+        .sca1 {
+            transform: scaleX(1.2) scaleY(0.5);
+            /* 1: 100%, 0.1: 10% */
+        }
+
+        .sca2 {
+            transform: scale(1.5);
+            /* 수직,수평 동시 적용 */
+            transform: scale(1.5, 0.4);
+            /* x: 수평, y: 수직 */
+        }
+
+        .sca1:hover {
+            transform: scale(1.5);
+        }
+
+        .rot {
+            transform: rotate(50deg);
+        }
+
+        .skewX {
+            transform: skewX(30deg);
+        }
+
+        .skewY {
+            transform: skewY(30deg);
+        }
+    </style>
+</head>
+
+<body>
+    <hr> <!-- 구분선 -->
+    <h1>1. translate (위치 이동)</h1>
+
+    <div class="outline">
+        <div class="box tran1"></div>
+    </div> <br> <br>
+
+    <div class="outline">
+        <div class="box tran2"></div>
+    </div> <br> <br>
+
+    <div class="outline">
+        <div class="box tran3"></div>
+    </div> <br> <br>
+
+    <div class="outline">
+        <div class="box tran4"></div>
+    </div> <br> <br>
+
+    <div class="outline">
+        <div class="box tran5"></div>
+    </div> <br> <br>
+
+    <hr> <!-- 구분선 -->
+    <h1>2. scale (크기 조정)</h1>
+
+    <div class="outline">
+        <div class="box sca1"></div>
+    </div> <br> <br>
+
+    <div class="outline">
+        <div class="box sca2"></div>
+    </div> <br> <br>
+
+    <hr> <!-- 구분선 -->
+    <h1>3. rotate (회전)</h1>
+
+    <div class="outline">
+        <div class="box rot"></div>
+    </div> <br> <br>
+
+    <hr> <!-- 구분선 -->
+    <h1>4. skew (왜곡)</h1>
+
+    <div class="outline">
+        <div class="box skewX"></div>
+    </div> <br> <br>
+
+    <div class="outline">
+        <div class="box skewY"></div>
+    </div> <br> <br>
+
+
+</body>
+
+</html>

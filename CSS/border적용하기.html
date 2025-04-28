@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border적용하기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .div_1 {
+            border: 2px solid red;
+            width: 100px;
+            height: 100px;
+
+            margin: 10px;
+            padding: 20px;
+        }
+        .div_2 {
+            border: 2px solid blue;
+            width: 100px;
+            height: 100px;
+
+            /* top, right, bottom, left  */
+            margin: 10px 0px 10px 0px;
+            padding: 30px 10px; /* 위아래, 좌우 */
+            /* margin-bottom: 10px; */ /*한가지만 선택할 경우*/
+        }
+        .div_3 {
+            border: 2px solid yellowgreen;
+            width: 100px;
+            height: 100px;
+
+            border-radius: 50%;
+            padding: 1%;
+            overflow: hidden; /* 내용물이 부모테그 바깥으로 넘어가는 현상을 제어 */
+        }
+    </style>
+</head>
+    <body>
+    <div class="div_1">
+        내용 1
+    </div>
+    <div class="div_2">
+        내용 2
+    </div>
+    <div class="div_3">
+        내용 3
+    </div>
+</body>
+</html>

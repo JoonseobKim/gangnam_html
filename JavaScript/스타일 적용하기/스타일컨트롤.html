@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 컨트롤</title>
+
+    <style>
+        .target {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="작다" onclick="small()" />
+    <input type="button" value="크다" onclick="big()" />
+
+    <input type="button" value="검정색" onclick="black()">
+    <input type="button" value="초록색" onclick="green()">
+
+
+    <input type="button" value="산 그림" onclick="trees()">
+    <input type="button" value="바다 그림" onclick="ocean()">
+
+
+    <input type="button" value="상자 숨김" onclick="hide()">
+    <input type="button" value="상자 표시" onclick="pot()">
+
+    <div class="target" id="target"></div>
+
+    <script>
+        let size = 100;
+        const target = document.getElementById('target') // 주소값 저장
+        // 크기 작은 도형
+        function small() {
+            size = size - 10;
+            target.style.width = size + 'px';
+            target.style.height = size + 'px';
+        }
+        // 크기 큰 도형
+        function big() {
+            size = size + 10;
+            target.style.width = size + 'px';
+            target.style.height = size + 'px';
+        }
+
+        // 검정 배경
+        function black() {
+            target.style.backgroundColor = 'black';
+        }
+        // 초록 배경
+        function green() {
+            target.style.backgroundColor = 'green';
+        }
+
+        // 산 그림
+        function trees() {
+            target.style.backgroundImage = 'url("https://img.freepik.com/premium-photo/amazing-beautiful-mountains-with-dramatical-sky-clouds-view-from-mountain_567313-4208.jpg")';
+            target.style.backgroundSize = '100% 100%';
+        }
+         // 바다 그림
+         function ocean() {
+            target.style.backgroundImage = 'url("https://img.freepik.com/premium-photo/ocean-water-with-blue-sky-with-clouds_114106-1640.jpg?semt=ais_hybrid&w=740")';
+            target.style.backgroundSize = '100% 100%';
+        }
+
+        // 상자 숨김
+        function hide() {
+            target.style.display = 'none';
+        }
+         // 상자 표시
+         function pot() {
+            target.style.display = 'block';
+        }
+
+
+
+    </script>
+</body>
+
+</html>

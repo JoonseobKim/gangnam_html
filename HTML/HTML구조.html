@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML구조</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div onclick="이벤트시작()"></div>
+    <input type="text" id="num1" value="" />
+    <input type="text" id="num2" value="" />
+
+    <input type="button" onclick="이벤트시작()">
+
+    <script>
+
+        const inp_num1 = document.getElemnetById('num1');
+        const inp_num2 = document.getElemnetById('num2');
+
+        function 이벤트시작() {
+            alert(inp_num1.value);
+        }
+        function 이벤트시작2() {
+            alert(inp_num2.value);
+        }
+    </script>
+</body>
+
+</html>
