@@ -16,7 +16,22 @@
 
     <input type="button" value="제출" onclick="joinAction()" />
     <script>
-        // id 유효성 검사
+        function joinAction() {
+            // id 유효성 검사
+            if (!inp_id()) {
+                return false;
+            }
+            // pw 유효성 검사
+            if (!inp_pw()) {
+                return false;
+            }
+            // radio 유효성 검사
+            if (!fn_nat()) {
+                return false;
+            }
+        }
+
+        // id logic
         function inp_id() {
             const target = document.getElementById('inp').value;
             if (target.trim().length == 0) {
@@ -25,7 +40,7 @@
             }
             return true;
         }
-        // pw 유효성 검사
+        // pw logic
         function inp_pw() {
             const target = document.getElementById('inp2').value;
             if (target.trim().length == 0) {
@@ -34,7 +49,7 @@
             }
             return true;
         }
-        // radio 유효성 검사
+        // radio logic
         function fn_nat() {
             const target = document.getElementsByName('nat');
             for (let i = 0; i < tar.length; i++) {
